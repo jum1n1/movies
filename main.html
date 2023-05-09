@@ -6,7 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영화 좋아하세요..?/page2</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <script>
+        function abc(){
+            alert("버튼 사용 테스트")
+        }
+    </script>
+
     <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
         .mytitle {
             background-color: rgb(54, 135, 157);
             color: white;
@@ -42,12 +54,14 @@
             display: inline-block;
             overflow: hidden;
 
-            margin: 5px 7px 5px 7px
+            margin: 5px 7px 5px 7px;
+            position: relative;
         }
 
         .myposter-image {
             width: 100%;
             height: 100%;
+            display: block;
         }
 
         .mybtn {
@@ -56,7 +70,53 @@
             font-size: 30px;
             border-radius: 12px;
             border: #00000060;
+        }        .hover_text {
+            color: white;
         }
+
+        .textbox {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .myposter-box:hover .textbox {
+            opacity: 0.7;
+        }   
+
+        .text {
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+ 
+        .textbox>button {
+            width: 180px;
+            height: 40px;
+            font-size: 15px;
+
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            border-radius: 50px;
+
+        }
+        
     </style>
 </head>
 
@@ -74,34 +134,65 @@
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F8876ecefc861afc397a9943ab781bdf0316c4983"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Fbf08f2c383803951f7960602d81f4eced74ab43d"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F5605612b56736f1b4dedc8953b29b5d04c32c053"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Feb514ac276500897a26a8e979b130571586021b5"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F3a684ccaeb7aeac8e3f060ffe7249f7fe039443a"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Feb514ac276500897a26a8e979b130571586021b5"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
         <div class="myposter-box">
             <img src="https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Feb514ac276500897a26a8e979b130571586021b5"
                 class="myposter-image" alt="영화 포스터 - 이미지">
+            <div class="textbox">
+                <div class="text">영화제목</div>
+                <button onclick="abc()" type="button">자세히 보기</button>
+            </div>    
         </div>
+
         <div class="myposter-box"></div>
         <div class="myposter-box"></div>
         <div class="myposter-box"></div>
         <div class="myposter-box"></div>
     </div>
 </body>
+
+</html>
