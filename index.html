@@ -52,14 +52,20 @@
             border: 2px grey;
         }
 
-        .mypost {
-            width: 100%;
-            max-width: 500px;
-            margin: 20px auto 0px auto;
-            padding: 20px;
-            box-shadow: 0px 0px 3px 0px gray;
-
+        .popup {
             display: none;
+            position: fixed;
+            left: 30%;
+            top: 50%;
+            width: 60%;
+            margin-left: -10%;
+            height: 300px;
+            margin-top: -200px;
+            z-index: 1000;
+            padding: 20px;
+            background: white;
+            border: 1px solid #d1d8dd;
+            box-shadow: 0 0 6px 1px rgb(0 0 0 / 30%);
         }
 
         .mycomment {
@@ -80,11 +86,6 @@
         }
     </style>
     <script>
-        // load 되자마자 실행
-        // $(document).ready(function () {
-
-        // });
-
         //기록하기 button
         //data를 실어서 post -> '/movie'로 보냄(fetch)
         function posting() {
@@ -104,29 +105,24 @@
             })
         }
 
-        // function open_box() {
-        //     $('#post-box').show()
+        function open_box() {
+            $('#post-box').show()
 
-        // }
+        }
         function close_box() {
             $('#post-box').hide()
         }
 
-        function popup(url,title){
-            constelement = document.getElementById('')
-        }
-        
-        function toggleBtn(){
+        function toggleBtn() {
             const popup = document.getElementById('post-box');
 
-            if(popup.style.display !== 'none'){
+            if (popup.style.display !== 'none') {
                 popup.style.display = 'none'
             }
-            else{
+            else {
                 popup.style.display = 'block'
             }
         }
-
     </script>
 </head>
 
@@ -135,8 +131,9 @@
         <h1>영화 좋아하세요..?</h1>
         <div>
             <button type="button" class="centerbutton" id="writebtn" onclick="toggleBtn()">글 쓰기</button>
-            <a href="main.html"><button type="button" class="centerbutton">글 보기</button></a>
-            <div class="mypost" id="post-box">
+            <button type="button" class="centerbutton" onClick="location.href='main.html'">글 보기</button>
+            <!-- 팝업 -->
+            <div class="popup" id="post-box">
                 <div class="form-floating mb-3">
                     <input id="url" type="email" class="form-control" placeholder="name@example.com">
                     <label>영화URL</label>
@@ -158,14 +155,11 @@
                 </div>
                 <div class="mybtns">
                     <button onclick="posting()" type="button" class="btn btn-dark">기록하기</button>
-                    <!-- <button onclick="close_box()" type="button" class="btn btn-outline-dark">닫기</button> -->
+                    <button onclick="close_box()" type="button" class="btn btn-outline-dark">닫기</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 팝업 -->
-
-
 </body>
 
 </html>
